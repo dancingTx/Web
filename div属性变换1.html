@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body div{
+			margin: 0;
+			padding: 0;
+		}
+		.controls{
+			margin: 10px auto;
+			text-align: center;	
+			
+		}
+		input{
+			margin: 10px;
+		}
+		.pictures{
+			width: 100px;
+			height: 100px;
+			background: black;
+			margin: 10px auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="canvas">
+	<div class="controls" id="controls">
+		<input type="button" value="变宽">
+		<input type="button" value="变高">
+		<input type="button" value="变色">
+		<input type="button" value="隐藏">
+		<input type="button" value="重置">
+
+	</div>
+	<div class="pictures" id="pictures"></div>
+	</div>
+	<script>
+			let changeStyle = function (elem,attr,value) {
+				elem.style[attr]=value;
+			}
+
+			window.onload = function (){
+		let oBtn = document.getElementsByTagName('input');
+		let oPic = document.getElementById('pictures');
+		let oAtt = ["width","height","background","display","display"];
+		let oVla = ["150px","150px","red","none","block"];
+		for (let i = 0; i<oBtn.length; i++) {
+			oBtn[i].index = i;
+			oBtn[i].onclick = function () {
+				this.index == oBtn.length - 1&&(oPic.style.cssText = "");
+					changeStyle(oPic,oAtt[this.index],oVla[this.index]);
+			}
+		}
+	};
+	</script>
+</body>
+</html>
