@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    body {
+      background: black;
+      text-align: center;
+    }
+
+    #canvas {
+      background-color: white;
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <input type="color" name="" value="" id="color"><br> -->
+  <canvas id="canvas" width="800" height="800"></canvas>
+  <script type="text/javascript">
+    window.onload = function() {
+
+      let can = document.getElementById('canvas');
+      let ctx = can.getContext('2d');
+      //      let Ocolor = document.getElementById('color');
+      let lastX, lastY;
+      // let color = 'black';
+      can.onmousedown = function(ev) {
+        // Ocolor.onchange = function(){
+        //   color = this.value;
+        // }
+        lastX = ev.offsetX;
+        lastY = ev.offsetY;
+        can.onmousemove = function(ev) {
+
+          ctx.moveTo(lastX, lastY);
+          ctx.lineTo(ev.offsetX, ev.offsetY);
+          lastX = ev.offsetX;
+          lastY = ev.offsetY;
+          //ctx.strokeStyle = color;
+          console.log("我开始花了");
+          ctx.stroke();
+        };
+        can.onmouseup = function() {
+          can.onmousemove = null;
+          can.onmouseup = null;
+        };
+      };
+    };
+
+    // ctx.moveTo(100,200);
+    // ctx.lineTo(200,300);
+    // ctx.stroke();
+  </script>
+</body>
+
+</html>
