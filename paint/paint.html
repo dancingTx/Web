@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    body {
+      background-color: black;
+      text-align: center;
+    }
+
+    #canvas {
+      background-color: white;
+    }
+  </style>
+  <!-- <script type="text/javascript" src="paint.js"></script> -->
+</head>
+
+<body>
+  <!-- <img src="img/paint.jpg" alt="" id="img1"><br> -->
+
+  <input type="button" name="" value="变灰" id="btn1">
+  <input type="button" name="" value="还原" id ="btn2">
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <script type="text/javascript">
+    window.onload = function() {
+      var oC = document.getElementById('canvas');
+      var ctx = oC.getContext('2d');
+      var btn1 = document.getElementById('btn1');
+      var btn2 = document.getElementById('btn2');
+      var oImg = new Image();
+      oImg.src = "img/paint.jpg";
+      oImg.onload = function() {
+        ctx.drawImage(oImg, 0, 0);
+        btn1.onclick = function() {
+          var imgdata = ctx.getImageData(0, 0, oC.width, oC.height);
+          for (var i = 0; i < oC.height; i++) {
+            for (var j = 0; j < oC.width; j++) {
+              var avg = (imgdata.data[(i * oC.width + j) * 4] + imgdata.data[(i * oC.width + j) * 4 + 1] + imgdata.data[(i * oC.width + j) * 4 + 2]) / 3;
+              imgdata.data[(i * oC.width + j) * 4] = imgdata.data[(i * oC.width + j) * 4 + 1] = imgdata.data[(i * oC.width + j) * 4 + 2] = avg;
+
+            }
+          }
+          ctx.putImageData(imgdata, 0, 0);
+        }
+      btn2.onclick = function(){
+        ctx.drawImage(oImg,0,0);
+
+      }
+
+        // var r =imgdata.data[(i*oC.width+j)*4+0];
+        // var g =imgdata.data[(i*oC.width+j)*4+1];
+        // var b =imgdata.data[(i*oC.width+j)*4+2];
+        // var avg = (r+g+b)/3;
+        //       r = g = b = avg;
+
+        // var r = imgdata.data[(i*oC.width+j)*4];
+        // var g = imgdata.data[(i*oC.width+j)*4+1];
+        // var b = imgdata.data[(i*oC.width+j)*4+2];
+        // var avg = (r+g+b)/3;
+        // r = g =b = avg;
+        // var gray = 0.299*r +0.587*g +0.114*b;
+        // imgdata.data[0]= imgdata.data[1]=imgdata.data[2] = gray;
+
+      }
+    }
+  </script>
+</body>
+
+</html>

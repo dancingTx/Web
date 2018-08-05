@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    body{
+      background-color: black;
+      text-align: center;
+    }
+    #canvas{
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <script type="text/javascript">
+    window.onload = function(){
+      var oC = document.getElementById('canvas');
+      var ctx = oC.getContext('2d');
+      var img = new Image();
+      img.src="img/paint.jpg";
+
+      img.onload =function(){
+          ctx.drawImage(img,0,0);
+          var imgData = ctx.getImageData(0,0,oC.width,oC.height);
+          for(var i = 0.; i<oC.height;i++){//i表示行，最大不能超过height；
+            for(var j = 0;j<oC.width;j++){//j表示列，最大不能超过width
+              //每一个像素占4位，r g b a;
+              //oC.width相当于一行多少块,i*oC.width相当于本图长为800；则若
+              // 0行0列=>imgData.[0*4];
+              //0行1列=>imgData.data[1*4]
+              //1行0列=>imgData.data[(1*800+0)*4]
+              //1行1列=>imgData.data[(1*800+1)*4]
+              //2行0列=>imgData.data[(2*800+0)*4]
+              //以此类推
+              //则当第i行，第j列时=>imgData.data[(i*800+j)*4]=>imgData.data[(i*oC.width+j)*4]
+                  var idx = (i*oC.width+j)*4;
+                var r = imgData.data[idx+0];
+                var g= imgData.data[idx+1];
+                var b = imgData.data[idx+2];
+                var gray = r*.299+g*.587+b*.114;
+                imgdata.data[idx+0]= imgdata.data[idx+1]= imgdata.data[idx+1]=gray;
+
+            }
+          }
+          ctx.putImageData(imgData,0,0);
+      }
+    }
+  </script>
+</body>
+</html>
