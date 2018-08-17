@@ -1,0 +1,47 @@
+@charset "UTF-8";
+html {
+  color: #000;
+  background: #FFF;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  /*
+      合并边框，使两个边框之间只有一条线
+   */
+  border-collapse: collapse;
+  /*
+  边框间隙设置为零
+   */
+  border-spacing: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+em, strong, b, u, i {
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1, h2, h3 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%;
+  /* 用来兼容ie*/
+}
+
+img {
+  border: none;
+}
