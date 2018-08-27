@@ -1,0 +1,31 @@
+body,html,div,dd,dt,h1,h2,h3,h4,h5,h6,input,textarea,ul,li{
+  margin:0;
+  padding:0;
+
+}
+
+ol,ul,li{
+  list-style: none;
+
+}
+
+a{
+  text-decoration: none;
+  display: block;
+
+}
+img{
+  display: block;
+  border:none;
+}
+.clear{
+  zoom:1;
+}
+.clear:after{
+  display: block;
+  clear: both;
+  content: '';
+  visibility: hidden;
+  height: 0;
+
+}
