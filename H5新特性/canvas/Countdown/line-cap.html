@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: black;
+            text-align: center;
+        }
+
+        #canvas {
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas"></canvas>
+    <script>
+        const WINDOW_HEIGHT = 600;
+        const WINDOW_WIDTH = 800;
+        // const Radius = 300;
+        // const radius = 150;
+        const colors = ["#FF00FF", " #FF0000", " #FF7F24", " #0000FF", " #FFA500", "#FFFF00", "#FF00FF", " #FF0000",
+            " #FF7F24",
+            " #0000FF"
+        ];
+        window.onload = function () {
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext("2d");
+            canvas.height = WINDOW_HEIGHT;
+            canvas.width = WINDOW_WIDTH;
+            // canvas start
+            // ctx.miterLimit = 20;
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < 100; i++) {
+
+                var ran = Math.random() * 10 + 10; //随机数为10~20之间
+                var oX = Math.random() * canvas.width;
+                var oY = Math.random() * canvas.height;
+                var oRot = Math.random() * 360;
+                var oColor = colors[5];
+                drawStar(ctx, ran, ran / 2.0, oX, oY, 0, "black", oColor, "round", oRot);
+
+
+
+            }
+            // drawStar(ctx, 100, 50, 400, 350, 5, "black", "rgba(138,43,226,0.6)","round",0);
+
+
+
+        }
+
+        function drawStar(context, R, r, x, y, lineWidth, lineColor, fillColor, lineJoin, rot) {
+            context.beginPath();
+
+            for (var i = 0; i < 5; i++) {
+                var xi = Math.cos((18 + 72 * i - rot) / 180 * Math.PI) * R;
+                var yi = -Math.sin((18 + 72 * i - rot) / 180 * Math.PI) * R;
+                context.lineTo(xi + x, yi + y);
+
+                var xj = Math.cos((54 + 72 * i - rot) / 180 * Math.PI) * r;
+                var yj = -Math.sin((54 + 72 * i - rot) / 180 * Math.PI) * r;
+                context.lineTo(xj + x, yj + y);
+
+
+            }
+
+            context.closePath();
+            context.lineWidth = lineWidth;
+            context.strokeStyle = lineColor;
+            context.fillStyle = fillColor;
+            context.lineJoin = lineJoin;
+            context.fill();
+            context.stroke();
+        }
+    </script>
+</body>
+
+</html>

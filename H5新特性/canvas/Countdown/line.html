@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background: black;
+            text-align: center;
+        }
+        #canvas{
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        var colors = ['#FFFFCC','#DDDCAC','#32ffaa','#65adfc','#7ef87a'];
+            window.onload =  function(){
+                var canvas = document.getElementById('canvas');
+                var ctx = canvas.getContaext('2d');
+                canvas.width=800;
+                canvas.height=600;
+                
+                
+                //canvas start 
+                
+                    drawRect(ctx,100,100,300,300,10,'black',colors[3]);
+                    drawRect(ctx,200,200,300,300,10,'black','rgba(45,34,53,0.5)');
+
+                
+              
+               
+            }
+            function drawRect(context,x,y,height,width,linewidth,linecolor,fillcolor) {
+                // context.rect(x,y,width,height);
+                
+                context.lineWidth = linewidth;
+                context.strokeStyle = linecolor;
+                context.fillStyle = fillcolor;
+                
+                context.fillRect(x,y,width,height);
+                context.strokeRect(x,y,width,height);
+                
+                
+            }
+    </script>
+</body>
+</html>

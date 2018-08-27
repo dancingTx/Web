@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,html {
+            background: #000000;
+            text-align: center;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #canvas {
+            background: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" height="100%"></canvas>
+    <script>
+        const WINDOW_WIDTH = 1200;
+        const WINDOW_HEIGHT = 750;
+        window.onload = function () {
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            // canvas.width = WINDOW_WIDTH;
+            // canvas.height = WINDOW_HEIGHT;
+            canvas.width = document.body.clientWidth;
+            canvas.height = document.body.clientHeight;
+
+            //canvas start 
+            // context.fillStyle = "#000000";
+            // context.fillRect(0, 0, canvas.width, canvas.height);
+            let skyStyle = context.createRadialGradient(
+                canvas.width/2, canvas.height, 0, 
+                canvas.width/2,canvas.height,canvas.height
+                );
+            skyStyle.addColorStop(0.0, "black");
+            skyStyle.addColorStop(1.0, " #00008B");
+            context.fillStyle = skyStyle;
+            context.fillRect(0,0,canvas.width,canvas.height);
+            for (let i = 0; i < 100; i++) {
+                var oX = Math.random() * canvas.width;
+                var oY = Math.random() * canvas.height*0.65;
+                var oR = Math.random() * 5+ 5;
+                var oRot = Math.random() * 360;
+
+                darwtStar(context, oX, oY, oR, oRot);
+
+            }
+        }
+
+        function darwtStar(ctx, x, y, R, rot) {
+            ctx.save();
+
+            ctx.translate(x, y);
+            ctx.rotate(rot / 180 * Math.PI);
+            ctx.scale(R, R);
+            starPath(ctx);
+            //绘制x,y点坐标，绘制rot..旋转角度
+            //var a = Math.random()*1;
+            //ctx.fillStyle = "#FFFF00";
+            ctx.fillStyle = "rgba(255,255,0,1)";
+            // ctx.strokeStyle = "#000000";
+            // ctx.lineJoin = "round";
+            // ctx.lineWidth = 3;
+
+
+            ctx.fill();
+            // ctx.stroke();
+            ctx.restore();
+        }
+
+        function starPath(ctx) {
+            ctx.beginPath();
+            for (var i = 0; i < 5; i++) {
+                var xi = Math.cos((18 + 72 * i) / 180 * Math.PI);
+                var yi = -Math.sin((18 + 72 * i) / 180 * Math.PI);
+                ctx.lineTo(xi, yi);
+                var xj = Math.cos((54 + 72 * i) / 180 * Math.PI) * 0.5;
+                var yj = -Math.sin((54 + 72 * i) / 180 * Math.PI) * 0.5;
+                ctx.lineTo(xj, yj);
+            }
+            ctx.closePath();
+
+
+
+        }
+    </script>
+</body>
+
+</html>

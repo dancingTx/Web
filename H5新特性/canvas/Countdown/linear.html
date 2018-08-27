@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        body {
+            background: black;
+            text-align: center;
+
+        }
+
+        #canvas {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            canvas.height = 800;
+            canvas.width = 800;
+
+            // var linearGrad = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+            // linearGrad.addColorStop(0.0, "#ffffff");
+            // linearGrad.addColorStop(0.25, " #00FA9A");
+            // linearGrad.addColorStop(0.5, "#FFD700");
+            // linearGrad.addColorStop(0.75, " #FF8247");
+            // linearGrad.addColorStop(1.0, " #FF1493");
+            // context.fillStyle = linearGrad;
+            // context.fillRect(0, 0, canvas.width, canvas.height);
+            var radialGrad = context.createRadialGradient(200, 200, 0, 200, 200, 300);
+            radialGrad.addColorStop(0.0, "#ffffff");
+            radialGrad.addColorStop(0.25, " #00FA9A");
+            radialGrad.addColorStop(0.5, "#FFD700");
+            radialGrad.addColorStop(0.75, " #FF8247");
+            radialGrad.addColorStop(1.0, " #FF1493");
+            context.fillStyle = radialGrad;
+
+            context.fillRect(0, 0, 400, 400);
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

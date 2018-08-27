@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        body {
+            background: black;
+            text-align: center;
+
+        }
+
+        #canvas {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            canvas.height = 800;
+            canvas.width = 800;
+
+            // drawStar(context);
+            var backCanvas = createBackgroundCanvas();
+            var pattern = context.createPattern(backCanvas, "repeat");
+            context.fillStyle = pattern;
+            context.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function drawStar(ctx, x, y, R, rot) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(rot / 180 * Math.PI);
+            ctx.scale(R, R);
+            starPath(ctx);
+            
+            ctx.restore();
+            ctx.fillStyle = "yellow";
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = "black";
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        function createBackgroundCanvas() {
+            var backCanvas = document.createElement("canvas");
+            backCanvas.width = 100;
+            backCanvas.height = 100;
+            var backCanvasContext = backCanvas.getContext("2d");
+            drawStar(backCanvasContext, 50, 50, 50, 0);
+            return backCanvas;
+
+
+        }
+
+        function starPath(ctx) {
+            ctx.beginPath();
+            for (let i = 0; i < 5; i++) {
+                let xi = Math.cos((18 + 72 * i) / 180 * Math.PI);
+                let yi = -Math.sin((18 + 72 * i) / 180 * Math.PI);
+                ctx.lineTo(xi, yi);
+                let xj = Math.cos((54 + 72 * i) / 180 * Math.PI) * 0.5;
+                let yj = -Math.sin((54 + 72 * i) / 180 * Math.PI) * 0.5;
+                ctx.lineTo(xj, yj);
+
+            }
+            ctx.closePath();
+        }
+    </script>
+</body>
+
+</html>
