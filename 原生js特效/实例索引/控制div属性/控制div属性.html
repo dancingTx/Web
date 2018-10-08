@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制div属性</title>
+    <link rel="stylesheet" href="css/控制div属性.css">
+</head>
+<body>
+    <div class="outer">
+    <input type="button" value="变宽"/>
+    <input type="button" value="变高"/>
+    <input type="button" value="变色"/>
+    <input type="button" value="隐藏"/>
+    <input type="button" value="重置"/>
+    </div>
+    <div class="photo"></div>
+<!--<script>-->
+
+    <!--window.onload = function () {-->
+
+      <!--let changeStyle = function(elem,attr,value){-->
+        <!--elem.style[attr] = value;-->
+      <!--};-->
+            <!--let oDiv = document.getElementsByClassName("photo");-->
+            <!--let oBtn = document.getElementsByTagName("input");-->
+            <!--let shuxing = ["width","height","background-color","display","display"];-->
+            <!--let ovalue = ["300px","300px","red","none","block"];-->
+            <!--for(let i =0;i<oBtn.length;i++){-->
+                    <!--oBtn[i].index=i;-->
+                    <!--oBtn[i].onclick = function () {-->
+                      <!--this.index == oBtn[i].length-1&&(oDiv.style.cssText = "");-->
+                        <!--changeStyle(oDiv,shuxing[this.index],ovalue[this.index]);-->
+                    <!--}-->
+
+            <!--}-->
+    <!--}-->
+<!--</script>-->
+<script>
+    // var changeStyle = function (elem, attr, value)
+    // {
+    // elem.style[attr] = value
+    // };
+    window.onload = function ()
+    {
+    let oBtn = document.getElementsByTagName("input");
+    let oDiv = document.getElementById("photo");
+   // var oAtt = ["width","height","background","display","display"];
+    //var oVal = ["200px","200px","red","none","block"];
+
+    for (let i = 0; i < oBtn.length; i++)
+    {
+    //oBtn[i].index = i;
+        oBtn[i].style.width= "200px";
+    // oBtn[i].onclick = function ()
+    // {
+    // this.index == oBtn.length - 1 && (oDiv.style.cssText = "");
+    // changeStyle(oDiv, oAtt[this.index], oVal[this.index])
+    // }
+    }
+    };
+
+
+</script>
+</body>
+</html>

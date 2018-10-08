@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function sum() {
+var iResult = 0;
+for (var i = 0; i < arguments.length; i++) { iResult +=arguments[i]; } return iResult; }
+    window.onload = function () {
+      var oSpan = document.getElementsByTagName("span")[0];
+      var oBtn = document.getElementById("btn");
+      oBtn.onclick  = function () { 
+        var oTxt = document.getElementById("txt");
+          var oVal = oTxt.value.split(",");
+          var sum = 0;
+          console.log(oVal);
+          for (var i in oVal) {
+             sum += parseInt(oVal[i]);
+          }
+          oSpan.innerHTML = sum;
+
+       }
+
+    }
+</script>
+
+<body>
+    <input type="text" name="" id="txt">=
+    <span>?</span>
+    <input type="button" value="求和" id="btn">
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+span{
+    display: block;
+    border: 1px dashed #000;
+    background-color: #ccc;
+    margin:  10px 0;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 40px;
+    color: #00807C;
+}

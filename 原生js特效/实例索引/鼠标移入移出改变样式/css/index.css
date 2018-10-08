@@ -1,0 +1,17 @@
+#div {
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #fff;
+}
+
+#div.actived{
+    border: 10px solid #f00;
+    padding: 10px;
+    background-color: #ccc;
+    color: #f00;
+}

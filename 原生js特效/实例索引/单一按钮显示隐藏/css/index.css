@@ -1,0 +1,57 @@
+#div{
+    width: 200px;
+    height: 300px;
+    margin: 10px auto;
+}
+#box{
+    padding: 0;
+    margin: 0;
+    border: 1px solid #CED3D7;
+    background-color: #E9EDF2;
+}
+#title{
+    width: 200px;
+    height: 30px;
+    background-color: #CED3D7;
+    padding-left: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 30px;
+    position: relative;
+}
+#img{
+    width: 8px;
+    height: 5px;
+    list-style: none;
+    position: absolute;
+    right: 10px;
+    top: 13px;
+}
+ #img.up{
+    width: 8px;
+    height: 5px;
+    background: url(../images/ico.gif) no-repeat;
+    background-position: 0 -27px ;
+ }
+ #img.down {
+      width: 8px;
+      height: 5px;
+      background: url(../images/ico.gif) no-repeat;
+ }
+#box dd{
+    margin: 8px;
+    font-size: 12px;
+    line-height: 20px;
+}
+#box dd a{
+    color: #6B7980;
+    text-decoration: none;
+}
+
+#box .actived{
+    margin: 8px 0;
+    padding-left: 8px;
+    box-sizing: border-box;
+    background-color: #fff;
+    text-decoration: underline;
+}

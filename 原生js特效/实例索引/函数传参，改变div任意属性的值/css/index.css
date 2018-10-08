@@ -1,0 +1,19 @@
+   span {
+       font-size: 14px;
+       color: #aaa;
+       margin: 10px;
+   }
+
+   input {
+       margin: 10px;
+   }
+
+   #box {
+       width: 200px;
+       height: 200px;
+       background-color: #000;
+       padding: 10px;
+       box-sizing: border-box;
+       font-size: 14px;
+       color: #fff;
+   }

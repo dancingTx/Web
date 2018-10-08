@@ -1,0 +1,44 @@
+#box{
+    width: 300px;
+    border: 1px solid #000;
+}
+
+#btn{
+    padding: 0;
+    margin: 0;
+}
+
+#btn li{
+    list-style: none;
+    width: 100px;
+    height: 30px;
+    float: left;
+    border-bottom: 1px solid #000;
+    background-color: #000;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+#btn .actived{
+    background-color: #ccc;
+    color: #000;
+}
+#tab{
+    margin-top: 40px;
+}
+#tab li{
+    display: none;
+}
+
+#tab li span{
+    display: block;
+    width: 200px;
+    height: 30px;
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.clear{
+    clear: both;
+}

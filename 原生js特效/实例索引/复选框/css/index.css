@@ -1,0 +1,27 @@
+#box{
+    width: 120px;
+    border: 1px solid #000;
+    background-color: #FAFAFA;
+    border-radius: 6px;
+}
+#div{
+    width: 120px;
+    height: 40px;
+    border-bottom: 1px solid #000;
+}
+#box span{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+}
+#box a {
+    font-size: 12px;
+    text-decoration: none;
+    color: aqua;
+}
+#select{
+    margin: 10px;
+}
+#div1 input{
+    margin: 10px;
+}

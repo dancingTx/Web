@@ -1,0 +1,22 @@
+#box{
+    width: 400px;
+    height: 200px;
+    background-color: #FEF4EB;
+}
+
+#ul{
+    list-style: none;
+    padding: 0;
+}
+
+#ul li{
+    width: 80px;
+    height: 20px;
+    margin: 10px;
+    background-color: #f60;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+}

@@ -1,0 +1,162 @@
+body {
+  background-color: #3c3a3b;
+}
+#box {
+  width: 500px;
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+#box h3 {
+  display: block;
+  padding: 20px 0 0 20px;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+#user {
+  display: block;
+  margin-left: 20px;
+  width: 200px;
+  height: 24px;
+  float: left;
+  background: url(../images/inputBG.png) repeat-x;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+#img{
+    height: 24px;
+    float: left;
+}
+#img img{
+    width: 24px;
+    height: 24px;
+    margin: 0 1px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    filter: alpha(opacity=50);opacity: .5;
+}
+#img img.hover,#img img.current{
+    border: 1px solid #f00;
+    filter: alpha(opacity=100);opacity: 1;
+}
+#input {
+  resize: none;
+  height: 73px;
+  background: url(../images/inputBG.png) repeat-x;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 8px 0 0 20px;
+}
+#button {
+  height: 73px;
+  background: url(../images/boxBG.jpg) repeat-x;
+}
+#button p {
+  display: block;
+  float: right;
+  margin: 0 10px;
+  line-height: 60px;
+  font-size: 12px;
+  color: #aaa;
+}
+#button span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+#btn {
+  width: 112px;
+  height: 30px;
+  margin-top: 16px;
+  margin-right: 22px;
+  background: url(../images/btn.png) no-repeat;
+  float: right;
+}
+#btn:hover {
+  background: url(../images/btn.png) 0 -30px no-repeat;
+}
+#line {
+  width: 480px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 1px solid #e3eaec;
+  background-color: #e3eaec;
+}
+#talk {
+  width: 100px;
+  height: 30px;
+  margin-left: 6px;
+  margin-top: 6px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+#txt {
+  width: 460px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#txt ul {
+    height: 480px;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+#txt ul li {
+  margin-bottom: 6px;
+  overflow: hidden;
+  border-bottom: 1px dashed #ccc;
+  filter: alpha(opacity=00);opacity: .0;
+}
+#txt ul li.bg{
+    background-color: #EEE9E9;
+}
+#ul img {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 6px;
+}
+
+#ul .text {
+  width: 394px;
+  float: right;
+  margin-top: 6px;
+}
+#ul .user {
+  text-decoration: none;
+  font-size: 12px;
+  color: #2b4a78;
+}
+#ul .colon {
+  font-size: 12px;
+  color: #2b4a78;
+}
+#ul .txt {
+  word-wrap: break-word;
+  font-size: 12px;
+}
+#ul .date {
+  display: block;
+  font-size: 12px;
+  color: #a79dbd;
+  margin: 6px 0;
+}
+#ul .del{
+    display: block;
+    width: 40px;
+    height: 20px;
+    float: right;
+    text-decoration: none;
+    font-size: 12px;
+    color: #a79dbd;
+}
+#ul .del:hover{
+    text-decoration: underline;
+}
+.clear {
+  clear: both;
+}

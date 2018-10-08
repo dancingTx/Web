@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+width:200px;
+height:200px;
+background:#000;
+}
+</style>
+<script>
+    /*
+        changeStyle("div","width")    //选择样式
+        changeStyle("div","width",200);
+    
+    */
+        function  changeStyle(obj,styleName,value) { 
+            if (arguments.length == 2) {
+                return obj.style[styleName];
+                
+            } else {
+return obj.style[styleName] = value;
+            }
+         }
+    window.onload = function(){
+        var oBox = document.getElementById("box");
+        var oBtn = document.getElementsByTagName("input");
+        var oStyle = ["height","width","background","display","display"];
+        var oValue = ["300px","300px","green","none","block"];
+
+        for(let i =0;i<oBtn.length;i++){
+            oBtn[i].index = i;
+            oBtn[i].onclick = function () { 
+                oBox.style.cssText = "";//将行间样式重置
+changeStyle(oBox,oStyle[this.index],oValue[this.index]);
+                
+             }
+        }
+        
+    }
+</script>
+
+<body>
+    <!-- <div style=""></div> -->
+    <input type="button" value="变高">
+    <input type="button" value="变宽">
+    <input type="button" value="变红">
+    <input type="button" value="隐藏">
+    <input type="button" value="重置">
+    <div id="box"></div>
+
+</body>
+
+</html>

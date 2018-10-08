@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .outer{
+        width: 500px;
+        height: 100px;
+        margin: 10px auto;
+        position: relative;
+    }
+    input{
+        text-align: center;
+        margin: 10px;
+    }
+    #div1{
+        width: 50px;
+        height: 50px;
+        background-color:black;
+        margin: 20px auto;
+        position: absolute;
+        left: 400px;
+    }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <input type="button" value="变宽">
+        <input type="button" value="变长">
+        <input type="button" value="变色">
+        <input type="button" value="隐藏">
+        <input type="button" value="重置">
+
+    </div>
+    <div id="div1" class="div1"></div>
+    <script>
+
+        var changeStyle = function(elem,attr,value){
+                elem.style[attr] = value;
+        }
+    window.onload = function(){
+            var oDiv = document.getElementById("div1");
+            var oBtn = document.getElementsByTagName("input");
+            var shuxing = ["width","height","background-color","display","display"];
+            var ovalue = ["300px","300px","red","none","block"];
+            for(var i = 0 ;i<oBtn.length;i++){
+                    oBtn[i].index = i;
+                    oBtn[i].onclick = function(){
+                        this.index == oBtn.length - 1&&(oDiv.style.cssText = "");
+                        changeStyle(oDiv,shuxing[this.index],ovalue[this.index]);
+                    }
+            }
+    }
+    </script>
+</body>
+</html>

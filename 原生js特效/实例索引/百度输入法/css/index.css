@@ -1,0 +1,17 @@
+#ul{
+    
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #9A99FF;
+}
+#ul li{
+    border-bottom: 1px solid #9A99FF;
+    line-height: 27px;
+    color: #0000CC;
+}
+#ul li.actived{
+     background-color: #9A99FF;
+}

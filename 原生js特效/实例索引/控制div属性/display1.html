@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        margin: 10px;
+    }
+    </style>
+    <script>
+
+        function setStyle(name,value) { 
+var oBox = document.getElementById("box");
+oBox.style[name] = value;
+// oBox.style[name] = h+'px';
+// oBox.style[name] = color;
+console.log(oBox);
+         }
+        window.onload = function () { 
+//         var oBtn = document.getElementsByClassName("btn");
+//         var oBox = document.getElementById("box");
+//         oBtn[0].onclick = function (ev) {  
+//                 oBox.style.background = "green";
+//                 console.log(ev);
+//         }
+// oBtn[1].onclick = function (ev) {
+// oBox.style.background = "red";
+
+// }
+// oBtn[2].onclick = function (ev) {
+// oBox.style.background = "blue";
+
+// }
+var oBtn = document.getElementsByClassName("btn");
+oBtn[0].onclick = function () { 
+   setStyle("width","200px");
+ }
+oBtn[1].onclick = function () {
+setStyle("height","300px");
+}
+oBtn[2].onclick = function () {
+setStyle("background","red");
+}
+     }
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="变绿" class="btn">
+    <input type="button" value="变红" class="btn">
+    <input type="button" value="变蓝" class="btn">
+    <div id="box"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+ul{
+    display: none;
+    overflow: hidden;
+    list-style: none;
+    width: 80px;
+    height: 62px;
+    position: absolute;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 0;
+    float: left;
+}
+ul li{
+    height: 20px;
+    border-bottom: 1px dashed #000;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+ul li.actived{
+    background-color: #ccc;
+}

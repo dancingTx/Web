@@ -1,0 +1,51 @@
+body{
+    background-color: #ccc;
+}
+#box{
+    width: 280px;
+    height: 160px;
+    position: absolute;
+    background-color: #aaa;
+    border: 1px solid #fff;
+}
+.box{
+    border: 2px dashed #000;
+    position: absolute;
+}
+#div{
+    height: 30px;
+    background-color: #222222;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+#ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#btn{
+    float: right;
+    line-height: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+#ul span{
+    display: block;
+    width: 100px;
+    margin-top: 10px;
+    margin-left:10px;
+    float: left;
+    font-weight: 700;
+    color: #fff;
+}
+#ul li{
+    display: block;
+    width: 100px;
+    margin-top: 10px;
+    float: left;
+    color: #000;
+}

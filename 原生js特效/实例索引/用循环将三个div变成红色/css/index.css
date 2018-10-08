@@ -1,0 +1,16 @@
+#div{
+    width: 360px;
+    height: 80px;
+    margin: 0 auto;
+}
+ #div div{
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    float: left;
+    margin: 10px;
+}
+input{
+    display: block;
+    margin: 0 auto;
+}

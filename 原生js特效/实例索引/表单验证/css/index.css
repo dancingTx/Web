@@ -1,0 +1,105 @@
+form {
+    margin: 200px auto;
+    width: 300px;
+    position: relative;
+}
+
+span {
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000;
+}
+p.msg {
+    display: none;
+    width: 800px;
+    margin: 0;
+    float: left;
+    line-height: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+li.tip {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url(../images/tip.png);
+    background-size: 20px 20px;
+}
+
+li.fail {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url(../images/fail.png);
+    background-size: 20px 20px;
+}
+
+li.succ {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url(../images/succ.png);
+    background-size: 20px 20px;
+}
+
+b#count {
+    margin-right: 130px;
+    font-size: 12px;
+    color: #ccc;
+    visibility: hidden;
+}
+
+label {
+    float: right;
+    margin-bottom: 6px;
+}
+
+label.font {
+    margin-left: 75px;
+}
+
+em {
+    display: block;
+    float: left;
+    width: 57px;
+    height: 20px;
+    border-left: 1px solid #fff;
+    background-color:#FFBD74;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    color: #fff;
+}
+
+em.active {
+    background-color: #FF4015;
+}
+
+img {
+    display: block;
+    float: right;
+    width: 100px;
+    height: 40px;
+    margin-left: 16px;
+    border: 1px solid #000;
+}
+
+input.btn {
+    display: block;
+    margin: 210px auto;
+    width: 140px;
+    height: 30px;
+    background-color: #FF4015;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+}

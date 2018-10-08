@@ -1,0 +1,30 @@
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+li {
+    list-style: none;
+}
+
+.rating {
+    width: 100px;
+    height: 20px;
+    margin: 100px auto;
+}
+
+.rating-item {
+    float: left;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

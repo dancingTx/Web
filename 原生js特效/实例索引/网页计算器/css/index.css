@@ -1,0 +1,65 @@
+#div{
+    width: 300px;
+    height: 400px;
+    background-color: #1D1D1D;
+    border: 1px solid #000;
+    color: #fff;
+}
+
+#screen{
+    display: block;
+    width: 300px;
+    height: 80px;
+    margin-top: 16px;
+    background-color: #DFE1C9;
+}
+
+#btn{
+
+    list-style: none;
+    width: 280px;
+    height: 280px;
+    padding: 0;
+    margin-top: 15px;
+    position: relative;
+    color: #000;
+    
+}
+
+#btn li{
+    display: block;
+    width:60px;
+    height:  40px;
+    float: left;
+    margin: 6px 6px 10px 4px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+#btn li.zero{
+    width: 128px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+}
+#btn li:last-child{
+    width: 60px;
+    height: 95px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    line-height: 95px;
+    background-color: #F6801D;
+    color: #fff;
+}
+.brown{
+    background-color: #94877F;
+    color: #fff;
+}
+.black{
+    background-color: #000;
+    color: #fff;
+}
+
+

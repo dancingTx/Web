@@ -1,0 +1,14 @@
+ #txt {
+     margin-bottom: 10px;
+ }
+
+ span {
+     color: #ccc;
+     font-size: 14px;
+ }
+ #value{
+     margin-top: 20px;
+     font-size: 30px;
+     font-weight: 700;
+     color: #f00;
+ }
