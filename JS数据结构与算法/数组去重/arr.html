@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var arr = [12, 12, 56, 45, 89, 45, 23, 87, 65];
+    //数组去重
+    Array.prototype.unique = function () {
+        let obj = {};
+        for (let i = 0; i < this.length; i++) {
+            let curr = this[i];
+            if (obj[curr] == curr) {
+                this[i] = this[this.length - 1];
+                this.length--;
+                i--;
+                continue;
+            }
+            obj[curr] = curr;
+        }
+        obj = null;
+        return this;
+    }
+    console.log(arr.unique().sort((m,n)=>m-n))
+    //冒泡排序
+    //    Array.prototype.bubbleSort =  function () {
+    //         for (let i = 0; i < this.length - 1; i++) { //一共执行多少轮
+    //             for (let j = 0; j < this.length - 1 - i; j++) { //每轮执行多少次
+    //                 if (this[j] > this[j + 1]) {
+    //                     [this[j], this[j + 1]] = [this[j + 1], this[j]];
+    //                 }
+    //             }
+
+    //         }
+    //         return this;
+    //     }
+    //     console.log(arr.bubbleSort());
+
+    //冒泡排序 改进
+    //    Array.prototype.bubbleSort =  function () {
+    //        flag = false;
+    //         for (let i = 0; i < this.length - 1; i++) { //一共执行多少轮
+    //             for (let j = 0; j < this.length - 1 - i; j++) { //每轮执行多少次
+    //                 if (this[j] > this[j + 1]) {
+    //                     flag = true;
+    //                     [this[j], this[j + 1]] = [this[j + 1], this[j]];
+    //                 }
+    //             }
+    //             if(flag){
+    //                 flag = false;
+    //             }else{
+    //                 break;
+    //             }
+    //         }
+    //         return this;
+    //     }
+    //     console.log(arr.bubbleSort());
+
+    //快速排序
+
+    // Array.prototype.quickSort = function() {
+    //     if(this.length == 0)return this;
+    //     let Point = Math.floor(this.length / 2),
+    //         pointValue =this.splice(Point, 1)[0], //获取基准值
+    //         left = [],
+    //         right = [];
+    //     for (let i = 0; i <this.length; i++) {
+    //         let curr =this[i]; //获取每一个数字
+    //         if (curr < pointValue) {
+    //             left.push(curr)
+    //         } else {
+    //             right.push(curr);
+    //         }
+    //     }
+    //     return left.quickSort().concat([pointValue],right.quickSort());
+    // }
+
+    // console.log(arr.quickSort())
+
+    //插入排序
+
+    // Array.prototype.insertSort = function () {
+    //     let newArr = [];
+    //     newArr.push(this[0]);
+    //     for (let i = 0; i < this.length; i++) {
+    //         let curr = this[i]; //获取每一张牌
+    //         for (let j = newArr.length - 1; j >= 0;) { //获取手中的牌
+    //             if (curr < newArr[j]) {
+    //                 j--;
+    //                 if (j === -1) {
+    //                     newArr.unshift(curr);
+    //                 }
+    //             } else {
+    //                 newArr.splice(j + 1, 0, curr);
+    //                 j = -1;
+    //             }
+    //         }
+    //     }
+    //     return newArr;
+    // }
+    // console.log(arr.insertSort())
+
+    // Array.prototype.unique = function () {
+    //     let obj = {};
+    //     for (let i = 0; i < this.length; i++) {
+    //         let curr = this[i];
+    //         if (obj[curr] == curr) {
+    //             this[i] = this[this.length - 1];
+    //             this.length--;
+    //             i--;
+    //             continue;
+    //         }
+    //         obj[curr] = curr;
+    //     }
+    //     obj = null;
+    // }
+    // arr.unique()
+    // console.log(arr);
+    // var arr = {a:1,b:2,c:3}
+    // arr = arr.forEach(item=>item);
+    // for (let item in arr) {
+    //     console.log(item);
+    // }
+    //         arr =Array.from(new Set(arr)) ;
+    // //1.map
+    // arr = arr.map(item=>{
+    //     var arr1 = [];
+    //     if(arr1.indexOf(item) == -1){
+    //         arr1.push(item);
+    //     }
+    //     return arr1;
+    // });
+    // console.log(arr.toString());
+    //
+    // arr = Array.from(new Set(arr));
+    // console.log(arr.toString());
+    //    arr = [...new Set(arr)];
+    //    console.log(arr)
+
+    // arr = arr.filter((item,index,arr)=>arr.indexOf(item)==index);
+    // function double(arr){
+    //     var arr1 = [];
+
+    // }
+    // function double(arr) {
+    //     let newArr = [];
+    //     for (let item in arr) {
+    //         if (newArr.indexOf(arr[item]) == -1) {
+    //             newArr.push(arr[item]);
+    //         }
+    //     }
+    //     return newArr;
+    // }
+    // function double(arr){
+    //     let newArr = [];
+    //     arr.forEach(item => {
+    //         if(newArr.indexOf(item) == -1){
+    //             newArr.push(item);
+    //         }
+    //     });
+    //     return newArr;
+    // }
+    // console.log(double(arr))
+</script>
+
+<body>
+
+</body>
+
+</html>

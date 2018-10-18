@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var arr = [78, 12, 45, 23, 12, 23, 45, 56, 89];
+    //快速排序
+    // function quickSort(arr) {
+    //     if(arr.length == 0)return arr;
+    //     let pointIndex = Math.floor(arr.length / 2),
+    //         pointValue = arr.splice(pointIndex, 1)[0],
+    //         left = [],
+    //         right = [];
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i] < pointValue) {
+    //             left.push(arr[i]);
+    //         } else {
+    //             right.push(arr[i]);
+    //         }
+    //     }
+    //     return quickSort(left).concat([pointValue], quickSort(right));
+    // }
+    // console.log(quickSort(arr))
+    Array.prototype.quickSort = function () {
+        if (this.length == 0) return this;
+        let pointIndex = Math.floor(this.length / 2),
+            pointValue = this.splice(pointIndex, 1)[0],
+            left = [],
+            right = [];
+        for (let i = 0; i < this.length; i++) {
+            if (this[i] < pointValue) {
+                left.push(this[i]);
+            } else {
+                right.push(this[i]);
+            }
+        }
+        return left.quickSort().concat([pointValue], right.quickSort());
+    }
+    console.log(arr.quickSort())
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    let arr = [12, 45, 78, 89, 23, 56, 45, 12, 23];
+    //冒泡排序
+    // function bubbleSort(arr) {
+    //     for (let i = 0; i < arr.length - 1; i++) { //执行轮数
+    //         for (let j = 0; j < arr.length - 1 - i; j++) { //每轮执行次数
+    //             if(arr[j] > arr[j+1]){
+    //                 [arr[j],arr[j+1]] = [arr[j+1],arr[j]];
+    //             }
+    //         }
+    //     }
+    //     return arr;
+    // }
+    // console.log(bubbleSort(arr).toString())
+    // function bubbleSort(arr) {
+    //     flag = false;
+    //     for (let i = 0; i < arr.length - 1; i++) { //执行轮数
+    //         for (let j = 0; j < arr.length - 1 - i; j++) { //每轮执行次数
+    //             if (arr[j] > arr[j + 1]) {
+    //                 flag = true;
+    //                 [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+    //             }
+    //         }
+    //         if (flag) {
+    //             flag = false;
+    //         } else {
+    //             break;
+    //         }
+    //     }
+    //     return arr;
+    // }
+// console.log(bubbleSort(arr).toString())
+ Array.prototype.bubbleSort = function() {
+        flag = false;
+        for (let i = 0; i < this.length - 1; i++) { //执行轮数
+            for (let j = 0; j < this.length - 1 - i; j++) { //每轮执行次数
+                if (this[j] > this[j + 1]) {
+                    flag = true;
+                    [this[j], this[j + 1]] = [this[j + 1], this[j]];
+                }
+            }
+            if (flag) {
+                flag = false;
+            } else {
+                break;
+            }
+        }
+        return arr;
+    }
+console.log(arr.bubbleSort())
+
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    //插入排序
+    /**
+     * 1.从数组中抽取第一个数字
+     * 2.随后从数组中获取第二个数字，并于第一个数字比较，
+     * 如果第二个数字比第一个数字大，则将其插入第一个数字的后面
+     * 否则，将插入第一个数字的前面
+     * 3.从数组中获取第三个元素，并于新数组中的末尾数字进行比较，直到找到比第三个元素小的元素后，将其插入
+     * 以此类推
+     * */
+    var arr = [6, 3, 5, 7, 2, 4];
+
+    function insertSort(arr) {
+        let newArr = [];
+        newArr.push(arr[0]);//手中获取第一个元素
+        for (let i = 1; i < arr.length; i++) { //循环，检测新获取的数组中的数字是否比第一个数字大
+            let curr = arr[i];//每一次新获取的数字
+            for (let j = newArr.length - 1; j >= 0;) { //循环手中的数字，由于需要从末尾进行检测，所有数组需要倒序遍历
+                if (curr < newArr[j]) {
+                    j--;
+                    if(j === -1){
+                        newArr.unshift(curr);
+                    }
+                } else {
+                    newArr.splice(j+1,0,curr);
+                    j = -1;
+                }
+            }
+        }
+        return newArr;
+    }
+    console.log(insertSort(arr).toString());
+</script>
+
+<body>
+
+</body>
+
+</html>

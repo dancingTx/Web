@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    //快速排序思想
+    /**
+     * 1.首先在数组中找一个“基准点”,(一般把基准点设为数组中间的一项)
+     * 2.拿基准点与数组中的其他项进行比较，比基准点小的放在左侧，反之放在右侧
+     * 3.继续执行，将左侧数组与右侧数组中的基准点找到，并与其他数进行比较
+     * */
+    var arr = [12, 56, 89, 12, 45, 65, 74, 32, 16];
+
+    function quickSort(arr) {
+        if (arr.length <= 1) return arr;
+        var arrPoint = Math.floor(arr.length / 2), //获取基准点的索引
+            arrValue = arr.splice(arrPoint, 1)[0], //获取基准点的值，删除此项，并将此项获取
+            //用基准值与其他值进行比较，小的放在左侧，大的放在右侧
+            left = [],
+            right = [];
+        for (var i = 0; i < arr.length; i++) {
+            var curr = arr[i];
+            curr < arrValue ? left.push(curr) : right.push(curr);
+        }
+        return quickSort(left).concat(arrValue, quickSort(right));
+        //arrValue为数字，将其转为数组，将左侧的数组，基准值，右侧的数组进行拼接
+    }
+    console.log(quickSort(arr).toString());
+</script>
+
+<body>
+
+</body>
+
+</html>

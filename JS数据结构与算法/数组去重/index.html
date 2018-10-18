@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    //数组去重
+    let arr = [12, 45, 78, 89, 12, 32, 65, 23];
+
+//     function removeDouble(arr) {
+//         let obj = {}
+//         for (let i = 0; i < arr.length; i++) {
+//             let curr = arr[i];
+//                 if (obj[curr] == curr) {
+//                     arr[i] = arr[arr.length - 1];
+//                     arr.length--;
+//                     i--;
+//                     continue;
+//                 }
+//                  obj[curr] = curr;
+//         }
+//         obj = null;
+//         return arr;
+//     }
+//   console.log(removeDouble(arr));
+    Array.prototype.removeDouble = function () { 
+        let obj = {}
+        for(let i=0;i<this.length;i++){
+            let curr = this[i];
+            if(obj[curr] == curr){
+                this[i] = this[this.length - 1];
+                this.length--;
+                i--;
+                continue;
+            }
+            obj[curr] = curr;
+        }
+        obj = null;
+        return this;
+     }
+     arr.removeDouble().sort((m,n)=>m-n);
+    console.log(arr);
+</script>
+
+<body>
+
+</body>
+
+</html>

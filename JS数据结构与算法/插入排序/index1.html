@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var arr = [12, 45, 78, 98, 23, 45, 21, 32, 41, 21, 20];
+    //冒泡排序
+    function bubbleSort(arr) {
+        for (let i = 0; i < arr.length - 1; i++) { //轮数
+            for (let j = 0; j < arr.length - 1 - i; j++) { //每轮需要循环的次数
+                if (arr[j] > arr[j + 1]) {
+                    [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                }
+            }
+        }
+        return arr;
+    }
+    console.log(bubbleSort(arr).toString());
+
+    //冒泡改进
+    function bubbleSort(arr) {
+        let flag = false; //立个标，表示默认为否，
+        for (let i = 0; i < arr.length - 1; i++) { //轮数 
+            for (let j = 0; j < arr.length - 1 - i; j++) { //每轮需要循环的次数 
+                if (arr[j] > arr[j + 1]) {
+                    flag = true; //如果进行了交换，则将flag变为是
+                    [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                }
+            }
+            if (flag) { //如果循环后，否变成了是，则表示进行了交换
+                flag = false; //将flag变为否，进行下一轮的循环
+            } else { //循环完毕，如果flag还是否，则表示本轮未进行交换，直接退出即可
+                break;
+            }
+        }
+        return arr;
+    }
+    console.log(bubbleSort(arr).toString());
+
+    //快速排序
+    function quickSort(arr) {
+        if (arr.length <= 1) return arr; //当拼接到数组长度小于一时，将数组直接返回即可
+        let arrPoint = Math.floor(arr.length / 2), //基准值（中间值）的下标
+            pointValue = arr.splice(arrPoint, 1)[0], //将基准值从原数组中取出
+            left = [],
+            right = [];
+        for (let i = 0; i < arr.length; i++) {
+            let curr = arr[i] //取出数组中的每一个数值，与基准值进行比较
+            if (curr < pointValue) { //如果数值小于基准值，则将其放入左侧的数组，否则，放进右侧的数组
+                left.push(curr);
+            } else {
+                right.push(curr);
+            }
+        }
+        //将左/右侧数组再次进行上述比较，并返回拼接好的字符串
+        return quickSort(left).concat([pointValue], quickSort(right));
+    }
+    console.log(quickSort(arr).toString());
+
+    //插入排序
+    function insertSort(arr) {
+        let newArr = [];
+        newArr.push(arr[0]); //先抓一张牌在手中
+        for (let i = 1; i < arr.length; i++) {
+            let curr = arr[i]; //将桌上的牌依次抓向手中
+            for (let j = newArr.length - 1; j >= 0;) { //将手中的牌倒序遍历，从后向前比较
+                //将手中的牌与桌上的牌进行比较
+                //如果小于手中的牌，则向前推进，直到与手中的第一张牌比较，如果还小，则将其插入第一位置
+                if (curr < newArr[j]) {
+                    j--;
+                    if (j === -1) {
+                        newArr.unshift(curr);
+                    }
+                } else {
+                    newArr.splice(j + 1, 0, curr);
+                    j = -1;
+                }
+            }
+        }
+        return newArr;
+    }
+    console.log(insertSort(arr).toString());
+</script>
+
+<body>
+
+</body>
+
+</html>

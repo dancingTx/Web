@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    let arr = [89, 12, 45, 45, 12, 56, 23, 78, 23];
+    //插入排序
+    function insertSort(arr) {
+        let newArr = [];
+        newArr.push(arr[0]); //将第一张牌抓入手
+        for (let i = 1; i < arr.length; i++) {
+            let item = arr[i]; //桌上的每一张牌进行循环
+            for (let j = newArr.length - 1; j >= 0;) {
+                if (item < newArr[j]) {
+                    j--;
+                    if (j === -1) {
+                        newArr.unshift(item);
+                    }
+                } else {
+                    newArr.splice(j + 1, 0, item);
+                    j = -1;
+                }
+            }
+        }
+        return newArr;
+    }
+    console.log(insertSort(arr))
+</script>
+
+<body>
+
+</body>
+
+</html>

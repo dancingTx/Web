@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    //快速排序思想
+    /**
+     * 1.首先在数组中找一个“基准点”,(一般把基准点设为数组中间的一项)
+     * 2.拿基准点与数组中的其他项进行比较，比基准点小的放在左侧，反之放在右侧
+     * 3.继续执行，将左侧数组与右侧数组中的基准点找到，并与其他数进行比较
+     * */
+    var arr = [12, 56, 89, 12, 45, 65, 74, 32, 16, 56, 89, 45, 99];
+    //快速排序
+    // function quickSort(arr) {
+    //     if (arr.length <= 1) return arr;
+    //     let arrPoint = Math.floor(arr.length / 2),
+    //         arrValue = arr.splice(arrPoint, 1)[0],
+    //         left = [],
+    //         right = [];
+    //     for (let i = 0; i < arr.length; i++) {
+    //         let item = arr[i];
+    //         item < arrValue ? left.push(item) : right.push(item);
+    //     }
+    //     return quickSort(left).concat([arrValue], quickSort(right));
+    // }
+    // console.log(quickSort(arr));
+    //冒泡排序
+    // function bubbleSort(arr){
+    //     for(let i=0;i<arr.length;i++){//表示一共需要几轮，由于最后一项不需要比对，所以是n-1轮
+    //         for(let j=0;j<arr.length-1-i;j++){//表示每轮需要执行几次，由于轮数与次数正好相反，相加为arr的长度，因此需要-i
+    //             if(arr[j]>arr[j+1]){//如果前一个值大于后一个，则将两个数字进行交换
+    //                 [arr[j],arr[j+1]] = [arr[j+1],arr[j]];
+    //             }
+    //         }
+    //     }
+    //     return arr;//将数组返回
+    // }
+    // 冒泡排序(改进)
+    // function bubbleSort(arr) {
+    //     let flag = false; //设置flag为false，当两个数进行交换的时候，将flag变为true，进行一次交换后，将true改为false：当循环一次后，flag仍为false，则表示没有交换，如果没有交换，则直接退出循环
+    //     for (let i = 0; i < arr.length-1; i++) { //表示一共需要几轮，由于最后一项不需要比对，所以是n-1轮 
+    //         for (let j = 0; j < arr.length - 1 - i; j++) {
+    //             if (arr[j] > arr[j + 1]) { //如果前一个值大于后一个，则将两个数字进行交换
+    //                 [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+    //                 flag = true;
+    //             }
+    //         }
+    //         if (flag) {//如果是true则表示进行了交换，并将true改为false
+    //             flag = false;
+    //         } else {//如果循环出来还是false，则表示里面没有进行交换，直接退出循环即可
+    //             break;
+    //         }
+    //     }
+    //     return arr; //将数组返回
+    // }
+    // console.log(bubbleSort(arr).toString());
+    //插入排序
+    function insertSort(arr) {
+        let newArr = [];
+        newArr.push(arr[0]) //先抓一张牌
+        for (let i = 0; i < arr.length; i++) {
+            let curr = arr[i] //将牌堆中的每张牌依次抓到手中
+            for (let j = newArr.length - 1; j >= 0;) { //手中的牌
+                if (curr < newArr[j]) {
+                    j--; //如果新抓的牌小于手中的牌，就往前走
+                    if (j === -1) { //当走到最左侧时，说明新爪的牌最小，则添加到第一位置
+                        newArr.unshift(curr);
+                        console.log(newArr)
+                    }
+                } else {
+                    newArr.splice(j + 1, 0, curr)
+                    j = -1;
+                }
+            }
+        }
+        return newArr;
+    }
+    console.log(insertSort(arr).toString())
+</script>
+
+<body>
+
+</body>
+
+</html>
