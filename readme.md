@@ -73,6 +73,8 @@
 - [面向对象选项卡](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/由选项卡展开的/面向对象选项卡/js/index.js)
 - [闭包选项卡](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/由选项卡展开的/闭包选项卡/js/index.js)
 - [IIFE选项卡](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/由选项卡展开的/IIFE选项卡/js/index.js)
+### 闭包
+- [闭包实现斐波那契](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/JavaScript中的闭包/利用闭包实现斐波那契/fib.html)
 
 ## 综合实例
 
