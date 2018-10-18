@@ -83,3 +83,5 @@
 
 ## JavaScript框架
 - [Js运动框架](https://github.com/ytx1150328467/Web/blob/master/JS框架/JS运动框架/move.js)
+- [IIFE运动框架](https://github.com/ytx1150328467/Web/blob/master/JS框架/IIFE运动框架/js/move.js)
+
