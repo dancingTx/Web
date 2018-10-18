@@ -65,6 +65,7 @@
 - [七巧板](https://ytx1150328467.github.io/Web/H5新特性/canvas/Countdown/tangram.html)
 - [人物行走](https://ytx1150328467.github.io/Web/H5新特性/game/game.html)
 - [华丽倒计时](https://ytx1150328467.github.io/Web/H5新特性/canvas/Countdown/countdown.html)
+- [五子棋](https://ytx1150328467.github.io/Web/H5新特性/canvas/五子棋/index.html)
 ## JavaScript中的算法与数据结构
 - [递归](https://github.com/ytx1150328467/Web/blob/master/JS数据结构与算法/递归/index.html)
 - [冒泡排序](https://github.com/ytx1150328467/Web/blob/master/JS数据结构与算法/冒泡排序/index.html)
