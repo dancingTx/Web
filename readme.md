@@ -66,7 +66,7 @@
 - [冒泡排序](https://github.com/ytx1150328467/Web/blob/master/JS数据结构与算法/冒泡排序/index.html)
 - [快速排序](https://github.com/ytx1150328467/Web/blob/master/JS数据结构与算法/快速排序/index.html)
 - [插入排序](https://github.com/ytx1150328467/Web/blob/master/JS数据结构与算法/插入排序/index.html)
-
+- [二叉树](https://github.com/ytx1150328467/Web/blob/master/JS数据结构与算法/二叉树/index.html)
 ## 综合实例
 
 - [meiBuy](https://ytx1150328467.github.io/Web/html+css/各种页面/meiBuy/index.html)
