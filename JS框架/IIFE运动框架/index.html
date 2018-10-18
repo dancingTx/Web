@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="./js/move.js"></script>
+<script>
+    window.onload = function () {
+    let oBtn = document.getElementById("btn");
+    oBtn.onclick = function () { 
+   _S(".dd").moveTo({"width":201,"height":300},function () { 
+_S("#dv").moveTo({"width":300,"height":300})
+    }); 
+     }
+    }
+</script>
+<style>
+    div{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #f00;
+    margin-top: 10px;
+    border: 1px solid #000;
+}
+</style>
+
+<body>
+    <input type="button" value="start" id="btn">
+    <div id="dv">1</div>
+    <div class="dd">2</div>
+    <div>3</div>
+
+</body>
+
+</html>
