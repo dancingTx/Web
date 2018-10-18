@@ -3,7 +3,7 @@
 
 ## 原生javascript特效
 
-###基础特效
+### 基础特效
 - [Div闪烁](https://ytx1150328467.github.io/Web/原生js特效/实例索引/Div闪烁/index.html)
 - [arguments求和](https://ytx1150328467.github.io/Web/原生js特效/实例索引/arguments/index.html)
 - [css函数](https://ytx1150328467.github.io/Web/原生js特效/实例索引/css函数√/index.html)
@@ -43,22 +43,22 @@
 - [鼠标移入移出改变样式](https://ytx1150328467.github.io/Web/原生js特效/实例索引/鼠标移入移出改变样式/index.html)
 - [鼠标移过，改变图片路径](https://ytx1150328467.github.io/Web/原生js特效/实例索引/鼠标移过，改变图片路径/index.html)
 
-###运动
+### 运动
 - [自动播放-幻灯片效果](https://ytx1150328467.github.io/Web/原生js特效/实例索引/自动播放-幻灯片效果/index.html)
 - [完美拖拽√](https://ytx1150328467.github.io/Web/原生js特效/实例索引/完美拖拽√/index.html)
 - [图片列表，鼠标移入移出改变图片透明度](https://ytx1150328467.github.io/Web/原生js特效/实例索引/图片列表，鼠标移入移出改变图片透明度/index.html)
 
-###事件
+### 事件
 - [事件练习√](https://ytx1150328467.github.io/Web/原生js特效/实例索引/事件练习√/index.html)
 
-###综合特效
+### 综合特效
 - [仿腾讯微博效果](https://ytx1150328467.github.io/Web/原生js特效/实例索引/仿腾讯微博效果/index.html)
 - [星级评分系统](https://ytx1150328467.github.io/Web/原生js特效/实例索引/星级评分系统/index.html)
 ## HTML5+CSS3实例
 
 - [画布](https://ytx1150328467.github.io/Web/H5新特性/canvas/画布.html)
 - [画布(改进)](https://ytx1150328467.github.io/Web/H5新特性/canvas/paint.html)
-- [七巧板](http://calmound.github.io/web/前端/HTML5+CSS3/七巧板/index.html)
+- [七巧板](https://ytx1150328467.github.io/Web/H5新特性/canvas/Countdown/tangram.html)
 - [人物行走](https://ytx1150328467.github.io/Web/H5新特性/game/game.html)
 - [华丽倒计时](https://ytx1150328467.github.io/Web/H5新特性/canvas/Countdown/countdown.html)
 
