@@ -67,6 +67,13 @@
 - [快速排序](https://github.com/ytx1150328467/Web/blob/master/JS数据结构与算法/快速排序/index.html)
 - [插入排序](https://github.com/ytx1150328467/Web/blob/master/JS数据结构与算法/插入排序/index.html)
 - [二叉树](https://github.com/ytx1150328467/Web/blob/master/JS数据结构与算法/二叉树/index.html)
+## JavaScript面向对象
+### 面向对象选项卡
+- [面向过程选项卡](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/由选项卡展开的/面向过程选项卡/选项卡.html)
+- [面向对象选项卡](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/由选项卡展开的/面向对象选项卡/js/index.js)
+- [闭包选项卡](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/由选项卡展开的/闭包选项卡/js/index.js)
+- [IIFE选项卡](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/由选项卡展开的/IIFE选项卡/js/index.js)
+
 ## 综合实例
 
 - [meiBuy](https://ytx1150328467.github.io/Web/html+css/各种页面/meiBuy/index.html)
