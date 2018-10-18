@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .div div{
+        width: 100px;
+        height: 100px;
+        background: red;
+        float: left;
+        margin: 10px;
+        display: none;
+    }
+    /* .div .active{
+        background: red;
+    } */
+    </style>
+    <script>
+    window.onload = function () { 
+        //1.获取元素
+        var oDiv = document.getElementsByClassName("div")[0];
+        var aBtn = oDiv.getElementsByTagName("input");
+        var aDiv = oDiv.getElementsByTagName("div");
+        //2.for循环，找出所有button项；
+        for(var i = 0;i<aBtn.length;i++){
+            //7.将i传给index，使其传入adiv中
+            aBtn[i].index =i;//每点击以此，将i的数值传给button的index中
+
+            //3.添加点击事件，通过点击给每个button添加背景颜色
+                aBtn[i].onclick = function () { 
+                    //4.添加循环，将每个按钮的背景色设置为空
+                    console.log(this.value);
+                    for(var i=0;i<aBtn.length;i++){
+                        aBtn[i].style.background = "";
+                        
+                        console.log(aDiv[i].style.display);
+                        //5.将div全部设置为隐藏
+                        aDiv[i].style.display = "none";
+                    }
+                    // alert(this.index);
+                    // alert(i);
+                    this.style.background = "#f00";
+                    //6.添加显示
+                    aDiv[this.index].style.display = "block";
+
+                 }
+        }
+     }
+    </script>
+</head>
+<body>
+    <div class="div">
+            <input type="button" value="彩票" style="background-color: #ff0000;">
+            <input type="button" value="酒店">
+            <input type="button" value="体育">
+            <input type="button" value="篮球"><br>
+            <div style="display:block">1111</div>
+            <div>2222</div>
+            <div>3333</div>
+            <div>4444</div>
+    </div>
+</body>
+</html>

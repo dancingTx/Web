@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function () { 
+     let Singleton = (function () { 
+         function SingletonConstructor() { 
+             let oDiv = document.createElement("div")
+                oDiv.style.display = "none";
+                document.body.appendChild(oDiv);
+                return oDiv;
+          }
+          let instance = null;
+         return {
+             getInstance:function (content) {
+                 !instance&&(instance = new SingletonConstructor());
+                    instance.innerHTML = content;
+                    instance.show = function () { 
+                        this.style.display = "block";
+                     }
+                     instance.hide = function () { 
+                         this.style.display = "none";
+                      }
+                      return instance;
+                //  return {
+                //      ins:instance,
+                //      show:function () { 
+                //        this.ins.style.display = "block";  
+                //       },
+                //       hide:function () { 
+                //          this.ins.style.display = "none";
+                //        }
+                //  }
+              }
+         }
+      })();  
+let pop = Singleton.getInstance("hello");
+      document.getElementsByTagName("input")[0].onclick =function () { 
+          pop.show();
+       }
+       document.getElementsByTagName("input")[1].onclick = function () { 
+           pop.hide();
+        }
+}
+</script>
+
+<body>
+    <input type="button" value="弹出">
+    <input type="button" value="隐藏">
+</body>
+
+</html>
