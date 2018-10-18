@@ -1,10 +1,10 @@
 # 展示列表
 记录自己前端的学习小例子，有按照视频学习的，也有自己看到效果进行仿照练习。
 
-## javascript特效
+## 原生javascript特效
 
 ###基础特效
-- [求和](http://calmound.github.io/web/前端/javascript/求和.html)
+- [Div闪烁](http://htmlpreview.github.io/?https://github.com/ytx1150328467/Web/blob/master/%E5%8E%9F%E7%94%9Fjs%E7%89%B9%E6%95%88/%E5%AE%9E%E4%BE%8B%E7%B4%A2%E5%BC%95/Div%E9%97%AA%E7%83%81/index.html)
 - [换肤](http://calmound.github.io/web/前端/javascript/换肤/index.html)
 - [换色](http://calmound.github.io/web/前端/javascript/换色.html)
 - [改文字](http://calmound.github.io/web/前端/javascript/改文字.html)
