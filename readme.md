@@ -4,7 +4,7 @@
 ## 原生javascript特效
 
 ###基础特效
-- [Div闪烁]https://ytx1150328467.github.io/Web/原生js特效/实例索引/Div闪烁/index.html)
+- [Div闪烁](https://ytx1150328467.github.io/Web/原生js特效/实例索引/Div闪烁/index.html)
 - [arguments求和](http://htmlpreview.github.io/?https://github.com/ytx1150328467/Web/blob/master/%E5%8E%9F%E7%94%9Fjs%E7%89%B9%E6%95%88/%E5%AE%9E%E4%BE%8B%E7%B4%A2%E5%BC%95/arguments/index.html)
 - [css函数](http://htmlpreview.github.io/?https://github.com/ytx1150328467/Web/blob/master/%E5%8E%9F%E7%94%9Fjs%E7%89%B9%E6%95%88/%E5%AE%9E%E4%BE%8B%E7%B4%A2%E5%BC%95/css%E5%87%BD%E6%95%B0%E2%88%9A/index.html)
 - [改文字](http://calmound.github.io/web/前端/javascript/改文字.html)
