@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    //递归实现斐波那契数列
+    //缺点：出现大量重复代码，当运算量较大时，浏览器易崩溃。
+    let count = 0,
+        num = 0;
+
+    function Fib(n) {
+        count++;
+        if (n <= 2) return 1;
+        else {
+            return Fib(n - 1) + Fib(n - 2);
+        }
+    }
+    console.log(Fib(20));
+    console.log(`运行了${count}次`)
+    //利用闭包实现递归，减少多余运算，提高效率
+    function createFib() {
+        let cache = [0, 1, 1];
+
+        function Fib(n) {
+            num++;
+            if (cache[n]) return cache[n];
+            else {
+                return cache[n] = arguments.callee(n - 1) + arguments.callee(n - 2);
+            }
+        }
+        return Fib;
+    }
+    let fib = new createFib;
+    console.log(fib(20));
+    console.log(`运行了${num}次`)
+</script>
+
+<body>
+
+</body>
+
+</html>
