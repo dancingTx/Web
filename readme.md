@@ -54,6 +54,10 @@
 ### 综合特效
 - [仿腾讯微博效果](https://ytx1150328467.github.io/Web/原生js特效/实例索引/仿腾讯微博效果/index.html)
 - [星级评分系统](https://ytx1150328467.github.io/Web/原生js特效/实例索引/星级评分系统/index.html)
+## 综合实例
+
+- [meiBuy](https://ytx1150328467.github.io/Web/html+css/各种页面/meiBuy/index.html)
+- [ZazaR](https://ytx1150328467.github.io/Web/html+css/各种页面/ZazaR/index.html)
 ## HTML5+CSS3实例
 
 - [画布](https://ytx1150328467.github.io/Web/H5新特性/canvas/画布.html)
@@ -73,8 +77,7 @@
 - [面向对象选项卡](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/由选项卡展开的/面向对象选项卡/js/index.js)
 - [闭包选项卡](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/由选项卡展开的/闭包选项卡/js/index.js)
 - [IIFE选项卡](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/由选项卡展开的/IIFE选项卡/js/index.js)
+### 闭包
+- [闭包实现斐波那契](https://github.com/ytx1150328467/Web/blob/master/JS面向对象/JavaScript中的闭包/利用闭包实现斐波那契/fib.html)
 
-## 综合实例
 
-- [meiBuy](https://ytx1150328467.github.io/Web/html+css/各种页面/meiBuy/index.html)
-- [ZazaR](https://ytx1150328467.github.io/Web/html+css/各种页面/ZazaR/index.html)
