@@ -84,4 +84,6 @@
 ## JavaScript框架
 - [Js运动框架](https://github.com/ytx1150328467/Web/blob/master/JS框架/JS运动框架/move.js)
 - [IIFE运动框架](https://github.com/ytx1150328467/Web/blob/master/JS框架/IIFE运动框架/js/move.js)
-
+## JQuery特效
+### 综合实例
+- [京东页面详情](https://ytx1150328467.github.io/Web/Jquery/京东商品详情界面/jd_detail.html)
