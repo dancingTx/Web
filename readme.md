@@ -4,7 +4,7 @@
 ## 原生javascript特效
 
 ### 基础特效
-- [Div闪烁](https://ytx1150328467.github.io/Web/原生js特效/实例索引/Div闪烁/index.html)
+- [Div闪烁](https://dancingTx.github.io/Web/原生js特效/实例索引/Div闪烁/index.html)
 - [arguments求和](https://ytx1150328467.github.io/Web/原生js特效/实例索引/arguments/index.html)
 - [css函数](https://ytx1150328467.github.io/Web/原生js特效/实例索引/css函数√/index.html)
 - [setTimeout应用](https://ytx1150328467.github.io/Web/原生js特效/实例索引/setTimeout应用/index.html)
